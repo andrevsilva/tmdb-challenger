@@ -1,4 +1,5 @@
 import React, { useState , useEffect } from 'react';
+import '../index.css'
 import { Link } from 'react-router-dom';
 import { fetchCasts, fetchMovieDetail, fetchMovieVideo, fetchSimilarMovie } from '../services';
 
@@ -6,6 +7,27 @@ import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 import { Modal } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
 import ReactStars from 'react-rating-stars-component';
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 5,
+      partialVisibilityGutter: 40 
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 4,
+      partialVisibilityGutter: 30 
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 3,
+      partialVisibilityGutter: 30 
+    }
+  }
 
 export function MovieDetails({match}) {
     let params = match.params;
@@ -72,9 +94,9 @@ export function MovieDetails({match}) {
         });
     };
 
-    const castList = casts.slice(0, 4).map((c, i) => {
+    const castList = casts.slice(0, 500).map((c, i) => {
         return (
-            <div className="col-md-3 text-center" key={i}>
+            <div className="" key={i}>
                 <img className="img-fluid rounded-circle mx-auto d-block" src={c.img} alt={c.name} />
                 <p className="font-weight-bold text-center">{c.name}</p>
                 <p className="font-weight-light text-center" style={{color: "#5a606b"}}>
@@ -84,15 +106,15 @@ export function MovieDetails({match}) {
         )
     })
 
-    const similarMovieList = similarMovie.slice(0, 4).map((item, index) => {
+    const similarMovieList = similarMovie.slice(0, 500).map((item, index) => {
         return (
-            <div className="col-md-3 col-sm-6" key={index}>
+            <div className="" key={index}>
                 <div className="card">
                     <Link to={`/movie/${item.id}`} >
                         <img className="img-fluid" src={item.poster} alt={item.title} />
                     </Link>
                 </div>
-                <div className="mt-3">
+                <div className="mt-3" id="info-similar">
                     <p style={{fontWeight: "bolder"}}>{item.title}</p>
                     <p>Rated: {item.rating}</p>
                     <ReactStars count={item.rating} size={20} color={"#f4c10f"}></ReactStars>
@@ -103,7 +125,12 @@ export function MovieDetails({match}) {
 
     return (
         <div>
-            <Link to="/">Home</Link>
+            <header>
+                <Link style={{ fontSize: 30, color: "#f4c10f"}} to="/"><i className="fas fa-chevron-circle-left"></i></Link>
+                <img style={{top: -34}} className="logo" src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMDb" />
+            </header>
+            
+
             <div className="container">
                 <div className="row mt-2">
                     <MoviePlayerModal
@@ -141,6 +168,7 @@ export function MovieDetails({match}) {
                         </p>
                     </div>
                 </div>
+
                 <div className="row mt-3">
                     <div className="col">
                         <ul className="list-inline">
@@ -210,7 +238,9 @@ export function MovieDetails({match}) {
                 </div>
 
                 <div className="row mt-3">
-                    {castList}
+                    <Carousel partialVisible={true} responsive={responsive} enterMode = { true }>
+                        {castList}
+                    </Carousel>
                 </div>
 
                 <div className="row mt-3">
@@ -222,7 +252,9 @@ export function MovieDetails({match}) {
                 </div>
 
                 <div className="row mt-3">
-                    {similarMovieList}
+                    <Carousel partialVisible={true} responsive={responsive} enterMode = { true }>
+                        {similarMovieList}
+                    </ Carousel>
                 </div>
 
                 <hr className="mt-5" style={{borderTop: "1px solid #5a606b"}}></hr>
