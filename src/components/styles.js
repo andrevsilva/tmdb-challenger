@@ -56,3 +56,9 @@ export const ArrowRight = styled.button`
     }
     
 `
+export const NameMovies = styled.p`
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+`

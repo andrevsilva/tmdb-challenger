@@ -165,7 +165,7 @@ export function MovieDetails({match}) {
                         </div>
                         <div
                             className="carousel-caption"
-                            style={{ textAlign: "center", fontSize: 35 }}
+                            style={{ textAlign: "center", bottom: 0}}
                         >
                             {detail.title}
                         </div>

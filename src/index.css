@@ -12,6 +12,9 @@ body {
       monospace;
   }
   
+  .react-multi-carousel-item{
+    margin-left: 15px;
+  }
   .list-inline-item .btn-outline-info {
     color: #5a606b;
     border: 1px solid #5a606b;
