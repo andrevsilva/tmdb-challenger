@@ -11,22 +11,7 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
-  header{
-      width: 100%;
-      height: 70px;
-      background-color: #151c26;
-      position: fixed;
-      z-index: 100;
-      top: 0;
-      padding: 15px;
-  }
-  .logo{
-    width: 150px;
-    margin: 0 auto;
-    display: block;
-    position: relative;
-    top: 12px;
-  }
+  
   .list-inline-item .btn-outline-info {
     color: #5a606b;
     border: 1px solid #5a606b;
@@ -40,9 +25,10 @@ body {
     background-color: transparent;
     transition: all 0.3s ease-in-out;
   }
-  
-  .react-multi-carousel-item{
-    margin: 5px;
+  .custom-button-group{
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 
 @media all and (max-width: 960px){

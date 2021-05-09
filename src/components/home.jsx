@@ -5,15 +5,17 @@ import { fetchGenre, fetchMovies , fetchMovieGenre , fetchPersons, fetchToprated
 import RBCarousel from 'react-bootstrap-carousel'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import ReactStars from 'react-rating-stars-component'
 
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css"
 import { Link } from 'react-router-dom'
-import ReactStars from 'react-rating-stars-component'
+import { Header , Logo , ArrowLeft , ArrowRight} from './styles';
+
 
 const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 5,
+      items: 8,
       partialVisibilityGutter: 40 
     },
     tablet: {
@@ -27,6 +29,15 @@ const responsive = {
       partialVisibilityGutter: 30 
     }
   }
+
+  const CustomButtonGroup = ({ next, previous, carouselState }) => {
+    return (
+      <div>
+        <ArrowLeft  onClick={() => previous()}><i class="fas fa-chevron-left" /></ArrowLeft>
+        <ArrowRight onClick={() => next()}><i class="fas fa-chevron-right" /></ArrowRight>
+      </div>
+    );
+  };
 
 export function Home() {
     const [nowPlay , setNowPlay] = useState([]);
@@ -86,7 +97,7 @@ export function Home() {
         )
     })
     
-    const movieList = movieByGenre.slice(0, 500).map((item, index) => {
+    const movieList = movieByGenre.slice(0, 50).map((item, index) => {
         return (
             <div className="" key={index}>
                 <div className="card">
@@ -103,7 +114,7 @@ export function Home() {
         )
     })
 
-    const trendingPersons = persons.slice(0, 500).map((p, i) => {
+    const trendingPersons = persons.slice(0, 50).map((p, i) => {
         return (
             <div className="text-center" key={i}>
                 <img className="img-fluid rounded-circle mx-auto d-block" src={p.profileImg} alt={p.name} />
@@ -112,7 +123,7 @@ export function Home() {
         )
     });
 
-    const topRatedList = topRated.slice(0, 500).map((item, index) => {
+    const topRatedList = topRated.slice(0, 50).map((item, index) => {
         return (
             <div className="" key={index}>
                 <div className="card">
@@ -131,10 +142,10 @@ export function Home() {
 
     return (
         <div>
-            <header>
-                <img className="logo" src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMDb" />
-            </header>
-            <div className="container">
+            <Header>
+                <Logo src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"/>
+            </Header>
+            <div style={{padding: 50}}>
                 <div className="row mt-3">
                     <div className="col">
                         <RBCarousel 
@@ -167,42 +178,60 @@ export function Home() {
 
                 <div className="row mt-3">
                     <div className="col">
-                        <p className="font-weight-bold" style={{color: "#5a606b"}}>
-                            POPULAR MOVIES
+                        <p className="font-weight-bold" style={{color: "#5a606b", fontSize: 18}}>
+                            <i class="fas fa-star" /> POPULAR MOVIES <i class="fas fa-star" />
                         </p>
                     </div>
                 </div>
 
                 <div className="row mt-3">
-                    <Carousel partialVisible={true} responsive={responsive} enterMode = { true }>
+                    <Carousel 
+                        partialVisible={true} 
+                        responsive={responsive} 
+                        enterMode = { true } 
+                        arrows={false}
+                        customButtonGroup={ <CustomButtonGroup /> }
+                    >
                         {movieList}
                     </Carousel>
                 </div>
 
                 <div className="row mt-3">
                     <div className="col">
-                        <p className="font-weight-bold" style={{color: "#5a606b"}}>
-                            TRENDING PERSONS ON THIS WEEK
+                        <p className="font-weight-bold" style={{color: "#5a606b", fontSize: 18}}>
+                            <i class="fas fa-glass-cheers" /> TRENDING PERSONS ON THIS WEEK <i class="fas fa-glass-cheers" />
                         </p>
                     </div>
                 </div>
 
                 <div className="row mt-3">
-                    <Carousel partialVisible={true} responsive={responsive} enterMode = { true }>
+                    <Carousel 
+                        partialVisible={true} 
+                        responsive={responsive} 
+                        enterMode = { true } 
+                        arrows={false}
+                        customButtonGroup={ <CustomButtonGroup /> }
+                    >
                         {trendingPersons}
                     </Carousel>
                 </div>
 
                 <div className="row mt-3">
                     <div className="col">
-                        <p className="font-weight-bold" style={{color: "#5a606b"}}>
-                            TOP RATED MOVIES
+                        <p className="font-weight-bold" style={{color: "#5a606b", fontSize: 18}}>
+                            <i class="fas fa-trophy" /> TOP RATED MOVIES <i class="fas fa-trophy" />
                         </p>
                     </div>
                 </div>
 
                 <div className="row mt-3">
-                    <Carousel partialVisible={true} responsive={responsive} enterMode = { true }>
+                    <Carousel 
+                        partialVisible={true} 
+                        responsive={responsive} 
+                        enterMode = { true } 
+                        arrows={false}
+                        customButtonGroup={ <CustomButtonGroup /> }
+                    >
                         {topRatedList}
                     </Carousel>
                 </div>
