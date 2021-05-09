@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+<h1 align="center">Carguero - Teste Front-end</h1><br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2 align="center">O teste constitui em consumir uma API de filmes (The Movie Database - TMDb) e exibir os filmes mais famosos com filtro de gênero para que se possa escolher o filme de acordo com o gênero. </h2>
+  
+<h2>Tecnologias Utilizadas nesse projeto:</h2>
+<ul>
+  <li>React Hooks</li>
+  <li>React-bootstrap</li>
+  <li>Styled Components</li>
+  <li>Axios</li>
+  <li>React-bootstrap-carousel</li>
+  <li>React Multi Carousel</li>
+  <li>React-rating-starts-component</li>
+  <li>React-router-dom</li>
+  <li>React-player</li>
+</ul>
 
-## Available Scripts
+<h2>Pontos importantes a serem levantados</h2>
 
-In the project directory, you can run:
+<ul>
+  <li>O layout foi criado de maneira com que fique limpo e visualmente agradavel ao usuario, utilizando um carousel fluido e evitando qualquer tipo de poluição visual</li>
+  <li>Foi utilizado Bootstrap para auxilio no responsivo e um pouco de styled components, mas todo CSS foi feito de maneira leve e simples</li>
+  <li>Trouxe algumas informações extras, como os filmes melhores avaliados, trailers, atores, site do filme, lançamento e outros detalhes</li>
+  <li>Foi atingido todos os pontos descritos no teste, utilizando um código limpo e simples</li>
+</ul>
 
-### `npm start`
+<h2>Como rodar o teste de maneira local?</h2>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p>Basta você fazer o download do projeto aqui mesmo pelo Github</p>
+<p>Você também precisa da ultima versão Node, é simples a instalação, basta acessa: https://nodejs.org/pt-br/download/ . A instalação é tranquila, só clicar em "Avançar" em todas as etapas e pronto, node instalado :) .</p>
+<p>Com o Node instalado devidamente, basta abrir o cmd e executar os seguintes comandos:</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<ul>
+  <li>1° <code>npm i</code></li> 
+  <li>2° <code>npm start</code></li>
+</ul>
+<p>O projeto será aberto em seguida e poderá ser testado</p>
 
-### `npm test`
+<h2>Como vizualisar o teste de outra maneira?</h2>
+<p>Também pode acessar clicando no meu repositorio Vercel pelo link: https://tmdb-challenger.vercel.app , aqui não é preciso instalar nada, apenas acessar o link de qualquer dispositivo, seja ele desktop ou mobile :) </p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h2>Obrigado pela oportunidade e espero que a gente se veja logo :D </h2>
