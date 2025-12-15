@@ -1,6 +1,6 @@
-<h1 align="center">Carguero - Teste Front-end</h1><br>
+<h1 align="center">TMDB - Project</h1><br>
 
-<h2 align="center">O teste constitui em consumir uma API de filmes (The Movie Database - TMDb) e exibir os filmes mais famosos com filtro de gênero para que se possa escolher o filme de acordo com o gênero. </h2>
+<h2 align="center">O projeto constitui em consumir uma API de filmes (The Movie Database - TMDb) e exibir os filmes mais famosos com filtro de gênero para que se possa escolher o filme de acordo com o gênero. </h2>
   
 <h2>Tecnologias Utilizadas nesse projeto:</h2>
 <ul>
@@ -24,7 +24,7 @@
   <li>Foi atingido todos os pontos descritos no teste, utilizando um código limpo e simples</li>
 </ul>
 
-<h2>Como rodar o teste de maneira local?</h2>
+<h2>Como rodar o projeto de maneira local?</h2>
 
 <p>Basta você fazer o download do projeto aqui mesmo pelo Github</p>
 <p>Você também precisa da ultima versão Node, é simples a instalação, basta acessa: https://nodejs.org/pt-br/download/ . A instalação é tranquila, só clicar em "Avançar" em todas as etapas e pronto, node instalado :) .</p>
@@ -36,7 +36,7 @@
 </ul>
 <p>O projeto será aberto em seguida e poderá ser testado</p>
 
-<h2>Como vizualisar o teste de outra maneira?</h2>
+<h2>Como vizualisar o projeto de outra maneira?</h2>
 <p>Também pode acessar clicando no meu repositorio Vercel pelo link: https://tmdb-challenger.vercel.app , aqui não é preciso instalar nada, apenas acessar o link de qualquer dispositivo, seja ele desktop ou mobile :) </p>
 
-<h2>Obrigado pela oportunidade e espero que a gente se veja logo :D </h2>
+<h2>Fiquem a vontade para contribuir, consultar ou trazer como forma de estudos :D </h2>
